@@ -9,7 +9,7 @@ app.MapGet("/", () => "Hello World!");
 
 app.MapGet("/estado", () => Results.Content(
     $"""
-    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/site.css">
     <h1>NovaHarvest</h1>
     <p>Hora del servidor: {DateTime.Now:HH:mm:ss}</p>
     """,

@@ -46,20 +46,29 @@ Utilizamos dos imágenes principales, una para nginx y otra para el backend. Al 
 
 ## 9. Indica las herramientas utilizadas en el proyecto y qué problema resuelve cada una.
 
-| Herramienta | Función |
-|---|---|
-| C# | Programar el backend. |
-| ASP.NET Core | Crear la aplicación web. |
-| Kestrel | Ejecutar el servidor. |
-| HTML | Crear la estructura de las páginas. |
-| CSS | Dar estilo a la web. |
-| nginx | Recibir y reenviar peticiones. |
-| Docker | Ejecutar la aplicación en contenedores. |
-| Docker Compose | Arrancar los servicios juntos. |
-| Visual Studio Code | Escribir el código. |
-| Terminal | Ejecutar comandos. |
-| curl | Comprobar las respuestas del servidor. |
-| Git | Guardar los cambios del proyecto. |
+- C# → Se utiliza para programar el backend.
+
+- ASP.NET Core → Permite crear la aplicación web.
+
+- Kestrel → Se encarga de ejecutar el servidor.
+
+- HTML → Sirve para crear la estructura de las páginas.
+
+- CSS → Se utiliza para dar estilo a la web.
+
+- nginx → Recibe las peticiones y las envía al backend.
+
+- Docker → Permite ejecutar la aplicación en contenedores.
+
+- Docker Compose → Sirve para arrancar los servicios del proyecto juntos.
+
+- Visual Studio Code → Se utiliza para escribir y modificar el código.
+
+- Terminal → Permite ejecutar comandos.
+
+- curl → Se utiliza para comprobar las respuestas del servidor.
+
+- Git → Permite guardar los cambios y controlar las versiones del proyecto.
 
 ## 10. Compara la hora que aparece en `/status` al ejecutar con Docker y con dotnet run. ¿Por qué puede haber diferencias?
 

@@ -10,16 +10,17 @@ public class SurplusModel : PageModel
     private const int ShelfLifeDays = 7;
     private const int LowStockKg = 50;
 
-    public Surplus Surplus { get; } = new(
-        "Cereza Picota",
-        "Huerta Los Castaños",
-        "Cabezuela del Valle",
-        DateTime.Today.AddDays(-2),
-        343,
-        120,
-        3.20m,
-        "<b>Recoger antes de las 14:00</b>"
-    );
+    public Surplus Surplus { get; } = new()
+    {
+        Product = "Cereza Picota",
+        Producer = "Huerta Los Castaños",
+        Village = "Cabezuela del Valle",
+        HarvestDate = DateTime.Today.AddDays(-2),
+        AvailableKg = 343,
+        ReservedKg = 120,
+        PricePerKg = 3.20m,
+        Note = "Recoger antes de las 14:00"
+    };
 
     public int StockKg { get; private set; }
 
@@ -38,8 +39,6 @@ public class SurplusModel : PageModel
     public string StockStatus { get; private set; }
 
     public bool Urgent { get; private set; }
-
-    public string NoteText { get; private set; }
 
     public bool OutOfStock { get; private set; }
 
@@ -62,8 +61,6 @@ public class SurplusModel : PageModel
         StockStatus = StockKg == 0 ? "Agotado" : LowStock ? "¡Últimos kilos!" : "Disponible";
 
         Urgent = DaysToConsume <= 2 && StockKg > 0;
-
-        NoteText = Surplus.Note ?? "Sin observaciones";
 
         OutOfStock = StockKg == 0;
     }

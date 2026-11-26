@@ -1,21 +1,13 @@
 namespace NovaHarvest.Web.Models;
 
-public class Surplus(
-    string product,
-    string producer,
-    string village,
-    DateTime harvestDate,
-    int availableKg,
-    int reservedKg,
-    decimal pricePerKg,
-    string? note)
+public class Surplus
 {
-    public string Product { get; init; } = product;
-    public string Producer { get; init; } = producer;
-    public string Village { get; init; } = village;
-    public DateTime HarvestDate { get; init; } = harvestDate;
-    public int AvailableKg { get; init; } = availableKg;
-    public int ReservedKg { get; init; } = reservedKg;
-    public decimal PricePerKg { get; init; } = pricePerKg;
-    public string? Note { get; init; } = note;
+    public string Product { get; init; } 
+    public string Producer { get; init; } 
+    public string Village { get; init; } 
+    public DateTime HarvestDate { get; init; } 
+    public int AvailableKg { get; init; } 
+    public int ReservedKg { get; init; }
+    public decimal PricePerKg { get; init; }
+    public string? Note { get; init; } 
 }
